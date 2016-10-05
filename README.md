@@ -13,9 +13,9 @@ wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && 
 ...after about 5 minutes, you should see
 
 ```
-browsing with firefox
+browsing with firefox, http://www.python.org
 Welcome to Python.org
-browsing with chrome
+browsing with chrome, http://www.python.org
 Welcome to Python.org
 ```
 
