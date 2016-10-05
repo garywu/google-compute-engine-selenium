@@ -61,14 +61,14 @@ sudo apt-get install -y --force-yes libfontconfig1 libfontconfig1-dev
 sudo apt-get install -y --force-yes python-dev
 
 # Install Chrome
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get -f install -y --force-yes
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # Install Chromedriver
-sudo wget -N http://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip
-sudo unzip -o chromedriver_linux64.zip
-sudo chmod +x chromedriver
+wget -N http://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip
+unzip -o chromedriver_linux64.zip
+chmod +x chromedriver
 sudo rm -f /usr/local/share/chromedriver
 sudo rm -f /usr/local/bin/chromedriver
 sudo rm -f /usr/bin/chromedriver
