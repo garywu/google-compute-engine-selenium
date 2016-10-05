@@ -21,18 +21,18 @@ sudo sh -c "echo \"deb http://packages.linuxmint.com debian import\" >> /etc/apt
 sudo sh -c "echo \"deb http://downloads.sourceforge.net/project/ubuntuzilla/mozilla/apt all main\" >> /etc/apt/sources.list"
 
 # Update aptitude
-sudo aptitude update
+sudo apt-get update
 
 # Install core dependencies
-sudo aptitude install -y --force-yes unzip
-sudo aptitude install -y --force-yes xserver-xorg-core
-sudo aptitude install -y --force-yes x11-xkb-utils
+sudo apt-get install -y --force-yes unzip
+sudo apt-get install -y --force-yes xserver-xorg-core
+sudo apt-get install -y --force-yes x11-xkb-utils
 
 # Install Xvfb (headless display system)
-sudo aptitude install -y --force-yes xvfb
+sudo apt-get install -y --force-yes xvfb
 
 # Install fonts for web browsers
-sudo aptitude install -y --force-yes xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
+sudo apt-get install -y --force-yes xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
 
 # Install Python core dependencies
 sudo apt-get update
