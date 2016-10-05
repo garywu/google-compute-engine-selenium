@@ -11,5 +11,5 @@ wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh
 sudo chmod +x install.sh
 sudo ./install.sh
 ./start_headless.sh
-./test.py
+./demo.py
 ```
