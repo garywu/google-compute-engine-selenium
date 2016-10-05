@@ -45,7 +45,6 @@ sudo apt-key add ./3EE67F3D0FF405B2.gpg
 sudo rm ./3EE67F3D0FF405B2.gpg
 sudo apt-get -qy --no-install-recommends install -y --force-yes firefox
 sudo apt-get -qy --no-install-recommends install -y --force-yes $(apt-cache depends firefox | grep Depends | sed "s/.*ends:\ //" | tr '\n' ' ')
-cd /tmp
 sudo wget --no-check-certificate -O firefox-esr.tar.bz2 'https://download.mozilla.org/?product=firefox-esr-latest&os=linux32&lang=en-US'
 sudo tar -xjf firefox-esr.tar.bz2 -C /opt/
 sudo rm -rf /usr/bin/firefox
