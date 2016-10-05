@@ -6,15 +6,17 @@ from selenium import webdriver
 display = Display(visible=0, size=(800, 600))
 display.start()
 
-print 'browsing with firefox'
+url = 'http://www.python.org'
+
+print 'browsing with firefox, ', url
 browser = webdriver.Firefox()
-browser.get('http://www.python.org')
+browser.get(url)
 print browser.title
 browser.quit()
 
-print 'browsing with chrome'
+print 'browsing with chrome, ', url
 browser = webdriver.Chrome()
-browser.get('http://www.python.org')
+browser.get(url)
 print browser.title
 browser.quit()
 
