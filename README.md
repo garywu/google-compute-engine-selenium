@@ -9,3 +9,14 @@ gae-selenium
 ```
 wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && chmod +x install.sh && ./install.sh &&  ./start_headless.sh && ./demo.py
 ```
+
+...after about 5 minutes, you should see
+
+```
+browsing with firefox
+Welcome to Python.org
+browsing with chrome
+Welcome to Python.org
+```
+
+that means you've succeeded.
