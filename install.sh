@@ -24,6 +24,7 @@ sudo sh -c "echo \"deb http://downloads.sourceforge.net/project/ubuntuzilla/mozi
 sudo aptitude update
 
 # Install core dependencies
+sudo aptitude install -y --force-yes unzip
 sudo aptitude install -y --force-yes xserver-xorg-core
 sudo aptitude install -y --force-yes x11-xkb-utils
 
