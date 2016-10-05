@@ -66,13 +66,13 @@ sudo apt-get -f install -y --force-yes
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # Install Chromedriver
-sudo wget -N http://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip -P ~/Downloads
-sudo unzip -o ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
-sudo chmod +x ~/Downloads/chromedriver
+sudo wget -N http://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip
+sudo unzip -o chromedriver_linux64.zip
+sudo chmod +x chromedriver
 sudo rm -f /usr/local/share/chromedriver
 sudo rm -f /usr/local/bin/chromedriver
 sudo rm -f /usr/bin/chromedriver
-sudo mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
+sudo mv -f chromedriver /usr/local/share/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
