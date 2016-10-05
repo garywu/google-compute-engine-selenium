@@ -5,7 +5,7 @@
 
 # Make sure this script is only run on Linux
 value="$(uname)"
-if [ $value == "Linux" ]
+if [ "$value" = "Linux" ]
 then
   echo "Initializing Requirements Setup..."
 else
