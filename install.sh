@@ -86,6 +86,6 @@ sudo easy_install pip
 wget https://raw.githubusercontent.com/garywu/gae-selenium/master/requirements.txt
 sudo pip install -r requirements.txt
 wget https://raw.githubusercontent.com/garywu/gae-selenium/master/demo.py
-sudo chmod +x demo.py
+chmod +x demo.py
 wget https://raw.githubusercontent.com/garywu/gae-selenium/master/start_headless.sh
-sudo chmod +x start_headless.sh
+chmod +x start_headless.sh
