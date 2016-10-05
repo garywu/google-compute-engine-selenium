@@ -7,10 +7,9 @@ gae-selenium
 4.	issue the following commands:
 
 ```
-sudo apt-get install git
-cd /
-sudo git clone https://github.com/garywu/gae-selenium.git
-cd gae-selenium
+wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh
+sudo chmod +x install.sh
+sudo ./install.sh
 ./start_headless.sh
 ./test.py
 ```
