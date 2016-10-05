@@ -62,7 +62,6 @@ sudo apt-get install -y --force-yes libfontconfig1 libfontconfig1-dev
 sudo apt-get install -y --force-yes python-dev
 
 # Install Chrome
-cd /tmp
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get -f install -y --force-yes
 sudo dpkg -i google-chrome-stable_current_amd64.deb
