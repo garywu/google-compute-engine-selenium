@@ -5,7 +5,7 @@
 
 # Make sure this script is only run on Linux
 value="$(uname)"
-if [ $value == "Linux" ]
+if [ "$value" = "Linux" ]
 then
   echo "Initializing Requirements Setup..."
 else
@@ -45,7 +45,6 @@ sudo apt-key add ./3EE67F3D0FF405B2.gpg
 sudo rm ./3EE67F3D0FF405B2.gpg
 sudo apt-get -qy --no-install-recommends install -y --force-yes firefox
 sudo apt-get -qy --no-install-recommends install -y --force-yes $(apt-cache depends firefox | grep Depends | sed "s/.*ends:\ //" | tr '\n' ' ')
-cd /tmp
 sudo wget --no-check-certificate -O firefox-esr.tar.bz2 'https://download.mozilla.org/?product=firefox-esr-latest&os=linux32&lang=en-US'
 sudo tar -xjf firefox-esr.tar.bz2 -C /opt/
 sudo rm -rf /usr/bin/firefox
@@ -59,20 +58,9 @@ sudo apt-get install -y --force-yes xvfb
 sudo apt-get install -y --force-yes build-essential chrpath libssl-dev libxft-dev
 sudo apt-get install -y --force-yes libfreetype6 libfreetype6-dev
 sudo apt-get install -y --force-yes libfontconfig1 libfontconfig1-dev
-sudo apt-get install -y --force-yes libmysqlclient-dev
 sudo apt-get install -y --force-yes python-dev
-sudo apt-get install -y --force-yes python-MySQLdb
-
-# Install PhantomJS
-cd ~
-export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
-sudo wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
-sudo tar xvjf $PHANTOM_JS.tar.bz2
-sudo mv -f $PHANTOM_JS /usr/local/share
-sudo ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 
 # Install Chrome
-cd /tmp
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get -f install -y --force-yes
 sudo dpkg -i google-chrome-stable_current_amd64.deb
@@ -93,3 +81,11 @@ sudo apt-get -f install -y --force-yes
 
 # Get pip
 sudo easy_install pip
+
+# get python dependency
+wget https://raw.githubusercontent.com/garywu/gae-selenium/master/requirements.txt
+sudo pip install -r requirements.txt
+wget https://raw.githubusercontent.com/garywu/gae-selenium/master/demo.py
+sudo chmod +x demo.py
+wget https://raw.githubusercontent.com/garywu/gae-selenium/master/start_headless.sh
+sudo chmod +x start_headless.sh
