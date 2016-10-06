@@ -1,4 +1,4 @@
-gae-selenium
+google-compute-engine-selenium
 ============
 
 1.	Go to [your cloud console compute engine](https://console.cloud.google.com/compute/instances)
