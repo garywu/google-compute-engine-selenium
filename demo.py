@@ -9,15 +9,21 @@ display.start()
 url = 'http://www.python.org'
 
 print 'browsing with firefox, ', url
-browser = webdriver.Firefox()
-browser.get(url)
-print browser.title
-browser.quit()
+try:
+  browser = webdriver.Firefox()
+  browser.get(url)
+  print browser.title
+  browser.quit()
+except e:
+  print e
 
 print 'browsing with chrome, ', url
-browser = webdriver.Chrome()
-browser.get(url)
-print browser.title
-browser.quit()
+try:
+  browser = webdriver.Chrome()
+  browser.get(url)
+  print browser.title
+  browser.quit()
+except e:
+  print e
 
 display.stop()
