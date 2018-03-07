@@ -14,7 +14,7 @@ try:
   browser.get(url)
   print browser.title
   browser.quit()
-except e:
+except Exception as e:
   print e
 
 print 'browsing with chrome, ', url
@@ -23,7 +23,7 @@ try:
   browser.get(url)
   print browser.title
   browser.quit()
-except e:
+except Exception as e:
   print e
 
 display.stop()
