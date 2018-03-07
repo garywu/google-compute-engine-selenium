@@ -97,9 +97,9 @@ sudo apt-get -f install -y --force-yes
 sudo easy_install pip
 
 # get python dependency
-wget -O https://raw.githubusercontent.com/garywu/gae-selenium/master/requirements.txt
+wget -O requirements.txt https://raw.githubusercontent.com/garywu/gae-selenium/master/requirements.txt
 sudo pip install -r requirements.txt
-wget -O https://raw.githubusercontent.com/garywu/gae-selenium/master/demo.py
+wget -O demo.py https://raw.githubusercontent.com/garywu/gae-selenium/master/demo.py
 chmod +x demo.py
-wget -O https://raw.githubusercontent.com/garywu/gae-selenium/master/start_headless.sh
+wget -O start_headless.sh https://raw.githubusercontent.com/garywu/gae-selenium/master/start_headless.sh
 chmod +x start_headless.sh
